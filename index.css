@@ -13,6 +13,31 @@
     src: url(./Font/FuturaPTMedium.otf);
 }
 
+@keyframes cambiocolor {
+    from {
+        background: rgb(217,147,17);
+    background: linear-gradient(30deg, rgba(217,147,17,1) 0%, rgba(104,69,140,1) 100%);;
+        color: #F2F2F2;
+    }
+
+    to {
+        background: rgb(104,69,140);
+        background: linear-gradient(30deg, rgba(104,69,140,1) 0%, rgba(242,242,242,1) 100%);
+        color: #0D0D0D;
+    }
+}
+
+@keyframes esp-letra {
+    from {
+        letter-spacing: 0rem;
+    }
+
+    to {
+        letter-spacing: 0.3rem;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +84,9 @@ li a {
 
 li a:hover {
     background-color: #D99311;
+    animation-name: esp-letra;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
 }
 
 
@@ -84,6 +112,10 @@ li a:hover {
     color: #F2F2F2;
     background-color: #0D0D0D;
     padding: 0.5rem;
+}
+
+.yellow {
+    color: #D99311;
 }
 
 .img-titulo p {
@@ -154,6 +186,10 @@ li a:hover {
     margin-bottom: 1.5rem;
 }
 
+.box-info-1 img:hover {
+    transform: scale(1.1);
+}
+
 .box-info-1 h3 {
     font-family: 'parrafo';
     margin-bottom: 1rem;
@@ -175,6 +211,11 @@ li a:hover {
     height: 18rem;
     border-radius: 100%;
     margin-bottom: 1.5rem;
+}
+
+
+.box-info-2 img:hover {
+    transform: scale(1.1);
 }
 
 .box-info-2 h3 {
@@ -200,6 +241,11 @@ li a:hover {
     margin-bottom: 1.5rem;
 }
 
+
+.box-info-3 img:hover {
+    transform: scale(1.1);
+}
+
 .box-info-3 h3 {
     font-family: 'parrafo';
     margin-bottom: 1rem;
@@ -222,6 +268,11 @@ li a:hover {
     justify-content: space-evenly;
     align-items: center;
     position: relative;
+    animation-name: cambiocolor;
+    animation-timing-function: cubic-bezier(.66,.28,.83,.67);
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 .instalar-info {
